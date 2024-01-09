@@ -1,0 +1,107 @@
+<%- include("partials/header.ejs") %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card text-center">
+          <div id="demo" class="carousel slide mt-4" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="item1 active"></li>
+              <li data-target="#demo" data-slide-to="1" class="item2"></li>
+              <li data-target="#demo" data-slide-to="2" class="item3"></li>
+              <li data-target="#demo" data-slide-to="3" class="item4"></li>
+              <li data-target="#demo" data-slide-to="4" class="item5"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item">
+                <img src="images/ProtoPart_C_C7.png" alt="Logo">
+                <div class="carousel-caption d-none d-md-block bg-dark" style="color:black;">
+                  <p>
+                    Logo
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item active">
+                <img src="images/ShopSign_11264_ProtoPart_C_C7.jpg" alt="Shop Sign">
+                <div class="carousel-caption d-none d-md-block bg-dark" style="color:black;">
+                  <p>
+                    Shop Sign
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.glitch.global/8702ab66-a6b8-4d28-b773-91fe79518434/workExample2.jpg?v=1704750009580" alt="Work Example 1">
+                <div class="carousel-caption d-none d-md-block bg-dark" style="color:black;">
+                  <p>
+                    3D printing in our shop is used almost daily - whether it’s to try a part out, work out a machining strategy or simply print on demand we have an array of SLA and FDM machines that we can produce parts on.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.glitch.global/8702ab66-a6b8-4d28-b773-91fe79518434/workExample1.jpg?v=1704750119506" alt="Work Example 1">
+                <div class="carousel-caption d-none d-md-block bg-dark" style="color:black;">
+                  <p>
+                    OP1 one on this steering component for one of our regular clients. Started life as a block 150mm x 80mm x 60mm and is being reduced down even further in OP2 with some ball end mulled tapers and other features.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/306281422_376820394665132_139042794612372150_n.jpg?_nc_cat=103&cb=99be929b-b574a898&ccb=1-7&_nc_sid=783fdb&_nc_ohc=1SvhKJLa3QYAX8Ko_o2&_nc_ht=scontent-man2-1.xx&oh=00_AfA13ovPGqBbeLLEninz8Ho9FyLD39rgRrfagMpQk3-rCw&oe=65A12127" alt="Work Example 1">
+                <div class="carousel-caption d-none d-md-block bg-dark" style="color:black;">
+                </div>
+              </div>
+            </div>
+
+            
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+$(document).ready(function(){
+  // Activate Carousel with a specified interval
+//  $("#myCarousel").carousel(cycle); //{interval: 500});
+  $("#myCarousel").carousel({interval: 1000, pause: "hover"});
+    
+  // Enable Carousel Indicators
+  $(".item1").click(function(){
+    $("#myCarousel").carousel(0);
+  });
+  $(".item2").click(function(){
+    $("#myCarousel").carousel(1);
+  });
+  $(".item3").click(function(){
+    $("#myCarousel").carousel(2);
+  });
+  $(".item4").click(function(){
+    $("#myCarousel").carousel(3);
+  });
+  $(".item5").click(function(){
+    $("#myCarousel").carousel(3);
+  });
+    
+  // Enable Carousel Controls
+  $(".carousel-control-prev").click(function(){
+    $("#myCarousel").carousel("prev");
+  });
+  $(".carousel-control-next").click(function(){
+    $("#myCarousel").carousel("next");
+  });
+});</script>
+
+
+<%- include("partials/footer.ejs") %>

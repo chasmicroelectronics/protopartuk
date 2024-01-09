@@ -1,7 +1,10 @@
 import express from "express";
+// Glitch requirement const express = require("express");
+
 
 const app = express();
 const port = 3000;
+// Glitch Requirement const port = process.env.PORT;
 
 // Write your code here:
 // Step 1: Render the home page "/" index.ejs
@@ -20,6 +23,10 @@ app.get("/about", (req, res) => {
 
 app.get("/services", (req, res) => {
   res.render("services.ejs");
+});
+
+app.get("/gallery", (req, res) => {
+  res.render("gallery.ejs");
 });
 
 app.get("/contact", (req, res) => {
